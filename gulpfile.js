@@ -59,7 +59,7 @@ gulp.task('site', function() {
 });
 
 gulp.task('dist-lib', function() {
-    return browserify('./index.js', { standalone: 'bitcoinConvert'})
+    return browserify('./index.js', { standalone: 'btcConvert'})
         .transform(babel, {presets: ['es2015']})
         .bundle()
         .pipe(source('bitcoin-convert.js'))
