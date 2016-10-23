@@ -40,3 +40,21 @@ This will provide `btcConvert` as a global object, or `define` it if you are usi
 
     var coins = btcConvert(4.6, 'Satoshi', 'BTC');  
 
+## API
+
+### btcConvert (from, fromUnit, toUnit, [representation])
+
+Converts an amount from one unit to another unit.
+
+- `from` (number | string | [Big](https://www.npmjs.com/package/big.js)) - the amount to convert
+- `fromUnit` (string) - the unit of the amount
+- `toUnit` (string) - the unit to convert to
+- `representation` (string) - the type of value to return, defaults to 'Number'.
+   - 'Number' - returns a standard javascript [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+   -  'Big' - returns a [Big](https://www.npmjs.com/package/big.js) number
+   -  'String' - returns a [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+   
+#### Examples
+
+    btcConvert(2, 'BTC', 'bits') // returns 2000000
+    btcConvert(2, 'BTC', 'bits', 'String') // returns '2000000'
