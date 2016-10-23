@@ -71,4 +71,13 @@ describe('Convert', () => {
         should.throws(() => convert(2, 'BTC', 'mBTC', 'x'));
     });
 
+    it('should allow unit aliases', () => {
+        convert(4.6, 'Satoshi', 'sat')
+            .should.be.a.Number()
+            .and.equal(4.6);
+        convert(4.6, 'μBTC', 'bits')
+            .should.be.a.Number()
+            .and.equal(4.6);
+    });
+
 });
