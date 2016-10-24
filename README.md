@@ -5,6 +5,9 @@
 
 Conversion between the bitcoin base unit (BTC) and other units (Satoshi,  μBTC, ...)
 
+The [change log](https://github.com/richardschneider/bitcoin-convert/releases) is automatically produced with
+the help of [semantic-release](https://github.com/semantic-release/semantic-release).
+
 ## Features
 
 - Avoids rounding errors by using a [big number](https://www.npmjs.com/package/big.js) package
@@ -56,8 +59,8 @@ Converts an amount from one unit to another unit.
    
 #### Examples
 
-    btcConvert(2, 'BTC', 'bits') // returns 2000000
-    btcConvert(2, 'BTC', 'bits', 'String') // returns '2000000'
+    btcConvert(2, 'BTC', 'bit') // returns 2000000
+    btcConvert(2, 'BTC', 'bit', 'String') // returns '2000000'
     
 ### btcConvert.units()
 
@@ -67,7 +70,7 @@ Returns an Array of unit symbols that can be used for conversion.
 
     console.log(btcConvert.units())
     // produces
-    // ['BTC', 'mBTC', 'μBTC', 'bits', 'bit', 'Satoshi', 'sat']
+    // ['BTC', 'mBTC', 'μBTC', 'bit', 'Satoshi', 'sat']
     
 ### btcConvert.addUnit (unit, factor)
 

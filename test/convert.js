@@ -75,9 +75,6 @@ describe('Convert', () => {
         convert(4.6, 'Satoshi', 'sat')
             .should.be.a.Number()
             .and.equal(4.6);
-        convert(4.6, 'μBTC', 'bits')
-            .should.be.a.Number()
-            .and.equal(4.6);
         convert(4.6, 'μBTC', 'bit')
             .should.be.a.Number()
             .and.equal(4.6);
