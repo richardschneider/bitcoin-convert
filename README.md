@@ -39,7 +39,7 @@ or from the [unpkg CDN](https://unpkg.com)
 
     <script src="https://unpkg.com/bitcoin-convert/dist/bitcoin-convert.min.js"></script>
 
-This will provide `btcConvert` as a global object, or `define` it if you are using [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition).
+The script creates the `btcConvert` global object or defines it if you are using [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition).
 
     var coins = btcConvert(4.6, 'Satoshi', 'BTC');  
 
