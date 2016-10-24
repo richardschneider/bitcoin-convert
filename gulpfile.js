@@ -47,7 +47,7 @@ gulp.task('istanbul', function () {
     }));
 });
 
-gulp.task('test-browser', ['dist'], function () {
+gulp.task('test-browser', ['dist-test'], function () {
     return gulp.src('test/runner.html')
         .pipe(mochaPhantomJS({reporter: 'min'}));
 });
