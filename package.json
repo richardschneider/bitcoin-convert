@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-convert",
-  "description": "Parse a Table Master message",
+  "description": "Conversion between the bitcoin base unit (BTC) and other units (Satoshi,  μBTC, ...)",
   "homepage": "https://github.com/richardschneider/bitcoin-convert",
   "bugs": "https://github.com/richardschneider/bitcoin-convert/issues",
   "license": "MIT",
