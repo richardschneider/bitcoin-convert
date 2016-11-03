@@ -53,6 +53,20 @@ describe('Convert', () => {
             .and.equal(2);
     });
 
+    it('should convert a NaN to a Number', () => {
+        Number.isNaN(convert(NaN, 'BTC', 'BTC', 'Number')).should.equal(true);
+        Number.isNaN(convert(NaN, 'BTC', 'mBTC', 'Number')).should.equal(true);
+    });
+
+    it('should convert a NaN to a String', () => {
+        convert(NaN, 'BTC', 'BTC', 'String').should.equal('NaN');
+        convert(NaN, 'BTC', 'mBTC', 'String').should.equal('NaN');
+    });
+
+    it('should not convert a NaN to a Big', () => {
+        should.throws(() => convert(NaN, 'BTC', 'BTC', 'Big'));
+    });
+
     it('should handle rounding errors', () => {
         convert(4.6, 'Satoshi', 'BTC', 'Number')
             .should.be.a.Number()
