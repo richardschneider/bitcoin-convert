@@ -79,10 +79,13 @@ describe('Convert', () => {
     it('should throw when unit is undefined', () => {
         should.throws(() => convert(new Big(2), 'x', 'BTC', 'Number'));
         should.throws(() => convert(new Big(2), 'BTC', 'x', 'Number'));
+        should.throws(() => convert(NaN, 'x', 'BTC', 'Number'));
+        should.throws(() => convert(NaN, 'BTC', 'x', 'Number'));
     });
 
     it('should throw when representaion is undefined', () => {
         should.throws(() => convert(2, 'BTC', 'mBTC', 'x'));
+        should.throws(() => convert(NaN, 'BTC', 'mBTC', 'x'));
     });
 
     it('should allow unit aliases', () => {
